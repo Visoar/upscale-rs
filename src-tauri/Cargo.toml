@@ -1,10 +1,10 @@
 [package]
-name = "upscale-rs"
+name = "PixMiller-App"
 version = "0.2.0"
-description = "A Tauri based GUI app that upscale images using Real-ESRGAN model."
-authors = ["OLoKo64 <reinaldorozatoj.11cg1@aleeas.com>"]
+description = "PixMiller Desktop App, to remove image backgrounds in bulk."
+authors = ["PixMiller <hello@pixmiller.com>"]
 license = "MIT"
-repository = "https://github.com/OLoKo64/upscale-rs"
+repository = "https://github.com/PixMiller/PixMiller_Bulk_Background_Removal_Tool"
 edition = "2021"
 rust-version = "1.66"
 

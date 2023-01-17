@@ -1,20 +1,20 @@
 <template>
   <div class="outer-box">
     <div class="options-column">
-      <img class="mb-3 about-logo-redirect" :src="HorizontalLogo" width="200" @click="openAboutPage" />
+      <img class="mb-3 about-logo-redirect" width="160" height="36" :src="HorizontalLogo" @click="openAboutPage" />
       <v-btn class="mt-6" size="large" rounded="lg" :prepend-icon="mdiFileImage" :disabled="isProcessing" elevation="0"
         @click="openImage">
         Select Images
       </v-btn>
-      <UpscaleTypeOption :disabled="isProcessing" class="mt-2 mb-5" @upscale-type-changed="setUpscaleType" />
+      <!-- <UpscaleTypeOption :disabled="isProcessing" class="mt-2 mb-5" @upscale-type-changed="setUpscaleType" /> -->
       <v-divider class="mb-10 mt-5" />
       <!-- Scale factor seems not to be working -->
       <!-- <UpscaleFactorOptions @upscale-factor-changed="updateUpscaleFactor" /> -->
       <v-btn size="large" rounded="lg" class="mb-2" :disabled="isReadyToUpscale" elevation="0" width="310"
         @click="startProcessing">
         {{
-    isMultipleFiles ? "Upscale Selected Images" : "Upscale Selected Image"
-}}
+          isMultipleFiles ? "Remove Background" : "Remove Background"
+        }}
       </v-btn>
       <v-btn size="large" rounded="lg" :disabled="isProcessing" elevation="0" @click="clearSelectedImage">
         Clear
@@ -29,7 +29,7 @@
         <v-progress-circular v-if="!imagePath.isReady" v-show="showMultipleFilesProcessingIcon" indeterminate
           color="#ff7a00" size="16" />
         <span v-if="!imagePath.isReady" v-show="showMultipleFilesProcessingIcon"> - {{ imagePath.progressPercentageMulti
-}} |</span>
+        }} |</span>
         <v-icon v-if="imagePath.isReady" size="16" :icon="mdiImageCheck" v-show="showMultipleFilesProcessingIcon" />
         <span class="ml-2">{{ imagePath.path }}</span>
         <v-divider />
@@ -48,7 +48,7 @@
 
 <script setup lang="ts">
 import { ref, Ref, computed } from "vue";
-import HorizontalLogo from "@/assets/upscale-rs-horizontal.png";
+import HorizontalLogo from "@/assets/pixmiller-horizontal.png";
 import UpscaleTypeOption from "@/components/UpscaleTypeOption.vue";
 import ImagePreviewer from "@/components/ImagePreviewer.vue";
 import { mdiFileImage, mdiImageCheck, mdiMenu } from "@mdi/js";
@@ -414,7 +414,6 @@ async function upscaleSingleImage() {
 .about-logo-redirect {
   margin-left: 2px;
   margin-bottom: 0px !important;
-  height: 30px;
   cursor: pointer;
 }
 

@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "upscale-rs",
+    "productName": "PixMiller App",
     "version": "0.2.0"
   },
   "tauri": {
@@ -40,13 +40,9 @@
       },
       "externalBin": [],
       "icon": [
-        "icons/upscale-rs-icon-32x32.png",
-        "icons/upscale-rs-icon-128x128.png",
-        "icons/upscale-rs-icon-128x128@x2.png",
-        "icons/upscale-rs-icon.icns",
-        "icons/upscale-rs-icon.ico"
+        "icons/pixmiller-icon.icns"
       ],
-      "identifier": "com.oloko64.upscale-rs",
+      "identifier": "com.pixmiller.app",
       "longDescription": "",
       "macOS": {
         "entitlements": null,
@@ -75,10 +71,10 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 573,
+        "height": 600,
         "resizable": false,
-        "title": "Upscale-rs",
-        "width": 870
+        "title": "PixMiller App",
+        "width": 880
       }
     ]
   }
